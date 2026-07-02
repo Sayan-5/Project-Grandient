@@ -40,34 +40,115 @@ body{
     justify-content: center;
     gap: 10px;
 }
-.copyCode{
-     display: flex;
-    text-align: center;
-    background-color: #00bf72;
-    border-radius: 2rem;
-    margin-top: 20px;
-    padding: 15px;
-}
-.hero {
-   background-color: white;
+.hero{
+    width: 90%;
+    max-width: 420px;   /* Was 500px */
+    background: #fff;
     border-radius: 20px;
-    padding: 30px;
+    padding: 25px;      /* Was 30px */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     box-shadow:
-        0 4px 6px rgba(0,0,0,0.1),
-        0 10px 20px rgba(0,0,0,0.15);
-    
+        0 10px 30px rgba(0,0,0,.12),
+        0 25px 50px rgba(0,0,0,.10);
 }
+
+.copyCode{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 18px;
+    margin-top: 20px;
+    border-radius: 12px;
+    background: #08c16d;
+    color: white;
+    text-align: center;
+    word-break: break-word;
+
+    cursor: pointer;
+    transition: 0.3s ease;
+    user-select: none;
+}
+
+.copyCode:hover{
+    transform: scale(1.02);
+    background: #06b665;
+}
+
+.copyCode:active{
+    transform: scale(.98);
+}
+
+
 .hero h2{
     text-align: center;
-    margin: 20px 0;
+    margin: 18px 0;
+    font-size: 18px;
 }
 #myButton,
 #myButton2{
-    cursor: pointer;
-    transition: 0.3s;
+    width: 120px;
+    height: 45px;
+    font-size: 15px;
+    font-weight: 600;
 }
 
 #myButton:hover,
 #myButton2:hover{
     transform: translateY(-3px);
+}
+
+
+
+
+@media (max-width:768px){
+
+    .hero{
+        width:90%;
+        padding:25px;
+    }
+
+    .btn-container{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    #myButton,
+    #myButton2{
+        width:100%;
+        height:48px;
+    }
+
+    h2{
+        font-size:26px;
+    }
+
+    .copyCode{
+        font-size:14px;
+    }
+
+}
+
+@media screen and (max-width:480px){
+
+    .hero{
+        padding:20px 15px;
+    }
+
+    h2{
+        font-size:18px;
+    }
+
+    #myButton,
+    #myButton2{
+        height:42px;
+        font-size:15px;
+    }
+
+    .copyCode{
+        font-size:13px;
+        padding:12px;
+    }
 }

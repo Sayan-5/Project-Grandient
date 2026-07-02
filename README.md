@@ -13,7 +13,7 @@ https://sayan-5.github.io/Project-Grandient/
 
 ## 📸 Preview
 
-![Project Screenshot](screenshot.png)
+![Project Preview](project-preview.png)
 
 ---
 
